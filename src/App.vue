@@ -1,11 +1,13 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+  <v-app>
 
-<style scoped></style>
+    <v-app-bar color="red-accent-1">
+      <v-toolbar-title>TheCocktailDB</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+
+  </v-app>
+</template>
