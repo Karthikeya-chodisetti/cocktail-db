@@ -1,20 +1,31 @@
 <template>
-    <v-card class="pa-6">
+    <v-card class="pa-4 bg-blue-grey-lighten-5" variant="outlined" rounded="xl">
+        
+        <v-row>
+        <v-col cols="12" md="1"> </v-col>
+        <v-col cols="12" md="4">
         <v-select
             v-model="drink"
-            :items="['Cocktail' , 'Ingredients']"
+            :items="['Cocktail','Ingredients']"
             label="search By"
             class="mb-3"
         > </v-select>
+        </v-col>
 
+        <v-col  cols="12" md="5">
         <v-text-field
             v-model="val"
             label="Search"
             placeholder="Type and press Enter"
             @keyup.enter="search"
         ></v-text-field>
+        </v-col>
 
-        <v-btn class="ma-2" @click="search"> Search </v-btn>
+        <v-col  cols="12" md="2">
+        <v-btn class="ml-2" icon="mdi-magnify" @click="search"></v-btn>
+        </v-col>
+
+        </v-row>
     </v-card>
 </template>
 
@@ -42,3 +53,11 @@ const search = async() => {
 }
 
 </script>
+
+<style scoped>
+
+.custom-card {
+  background-color: green;
+}
+
+</style>
